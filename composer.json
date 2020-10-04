@@ -1,0 +1,40 @@
+{
+    "name": "mohsen-nurisa/perfectmoney-laravel",
+    "description": "perfectmoney api wrapper for Laravel",
+    "keywords": [
+        "perfectmoney"
+    ],
+    "homepage": "",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mohsen Nurisa",
+            "email": "mohsen.nurisa@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Package\\Perfectmoney\\":"src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Package\\Perfectmoney\\PerfectmoneyServiceProvider"
+            ]
+        }
+    }
+}
