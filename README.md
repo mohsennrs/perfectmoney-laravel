@@ -38,7 +38,13 @@ The $params variable must contain the following parameters:
 'payment_units' => The fiat that you want to use, ex:USD
 
 Then attach the form inside 'data' index of the response into your then submit the form.
+Two callback functions are required to be set in perfectmoney.php file inside config directory. Follow the example below:
 
+	'pm_success_callback' => 'App\Http\Controllers\PerfectmoneyController::success',
+	'pm_fail_callback' => 'App\Http\Controllers\PerfectmoneyController::fail',
+  
+the 'success' and 'fail' methods must be static.
+  
 To redeem e-voucher use following line:
 
 Perfectmoney::redeemVoucher($params);
