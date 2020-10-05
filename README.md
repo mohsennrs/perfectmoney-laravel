@@ -43,9 +43,10 @@ The $params variable must contain the following parameters:
 
 Then attach the form inside 'data' index of the response into your then submit the form.
 Two callback functions are required to be set in perfectmoney.php file inside config directory. Follow the example below:
-
-	'pm_success_callback' => 'App\Http\Controllers\PerfectmoneyController::success',
-	'pm_fail_callback' => 'App\Http\Controllers\PerfectmoneyController::fail',
+	
+	'pm_success_callback' => 'App\Http\Controllers\PerfectmoneyController::success', // callback function for successfull transfer
+	'pm_fail_callback' => 'App\Http\Controllers\PerfectmoneyController::fail', // callback function unsuccessfull transfer
+	'pm_fail_status' => 'App\Http\Controllers\PerfectmoneyController::status', // callback function to handle order status after successfull transfer
   
 the 'success' and 'fail' methods must be static.
   
