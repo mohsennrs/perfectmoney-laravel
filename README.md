@@ -61,3 +61,11 @@ $params variable must contain following argumants:
 
 Note:
 To use this wrapper, you first need to enable API in your perfectmoney account. Also you will need to set an Alternative Passphrase.
+
+License
+The MIT License (MIT). Please see License File for more information.
+
+
+
+
+
