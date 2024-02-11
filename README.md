@@ -3,7 +3,7 @@ A wrapper on perfect-money's API
 
 Installation:
 
-	composer require mohsen-nurisa/perfectmoney-laravel
+	composer require nishad-prime/perfectmoney-laravel
 
 Usage: 
 After installaion, execute the line below to publish the ServiceProvider and create necessary tables:
