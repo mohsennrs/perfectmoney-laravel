@@ -41,19 +41,10 @@ class Perfectmoney extends PerfectmoneyContract
 
         $this->requiredSellParamsCheck($request);
 
-
     	$pmTransaction = new PerfectMoneyTransaction;
-
-    	do {
-    	    $uniqueToken = strtoupper(md5(mt_rand(1000000000, mt_getrandmax())));
-    	} while (PerfectMoneyTransaction::where('payment_id', $uniqueToken)->exists());
-
-    	$pmTransaction->payment_id = $uniqueToken;
-
-    	$pmTransaction->payment_amount=$request->get('payment_amount');
-
+    	$pmTransaction->payment_id    = $request->get('payment_id');
+    	$pmTransaction->payment_amount= $request->get('payment_amount');
     	$pmTransaction->payment_units = strtoupper($request->get('payment_units'));
-
     	$pmTransaction->payee_account = $this->pm_payee_account;
 
     	// $order->save();

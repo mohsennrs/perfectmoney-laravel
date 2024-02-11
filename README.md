@@ -38,6 +38,7 @@ Then you can initiate transfere using line below:
 
 The $params variable must contain the following parameters:
 
+	'payment_id' => the transaction id for the payment which you will receive in the callback. must be unique,
 	'payment_amount' => the amount of payment,
 	'payment_units' => The fiat that you want to use, ex:USD
 
