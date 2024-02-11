@@ -50,7 +50,7 @@ class Perfectmoney extends PerfectmoneyContract
     	// $order->save();
     	$pmTransaction->save();
 
-    	return ['status'=>'success','action'=>'submit_form','data'=>view('mohsen-nurisa/perfectmoney-laravel::form',compact('pmTransaction'))->render(),'message'=>__('sell_initiated_successfully')];
+    	return ['status'=>'success','action'=>'submit_form','data'=>view('nishad-prime/perfectmoney-laravel::form',compact('pmTransaction'))->render(),'message'=>__('sell_initiated_successfully')];
 
     }
 

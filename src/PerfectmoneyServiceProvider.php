@@ -14,7 +14,7 @@ class PerfectmoneyServiceProvider extends ServiceProvider
 		$this->loadMigrationsFrom(__DIR__.'/Database/migrations');
 		$this->loadRoutesFrom(__DIR__.'/Routes/web.php');
 
-		$this->loadViewsFrom(__DIR__.'/Views', 'mohsen-nurisa/perfectmoney-laravel');
+		$this->loadViewsFrom(__DIR__.'/Views', 'nishad-prime/perfectmoney-laravel');
 		$this->publishes([
 	        __DIR__.'/Config/perfectmoney.php' => config_path('perfectmoney.php'),
 	    ]);
