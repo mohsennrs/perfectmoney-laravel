@@ -253,7 +253,7 @@ class Perfectmoney extends PerfectmoneyContract
        $extracted = [];
 
        if(!preg_match_all("/<input name='(.*)' type='hidden' value='(.*)'>/", $response, $extracted, PREG_SET_ORDER)){
-          return ['status'=>'failed','message'=> 'Ivalid input'];
+          return ['status'=>'failed','message'=> 'Invalid input'];
        }
 
        $ar= [];
