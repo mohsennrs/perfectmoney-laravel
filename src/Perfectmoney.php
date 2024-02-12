@@ -196,7 +196,7 @@ class Perfectmoney extends PerfectmoneyContract
             throw InvalidConfiguration::emptyAlternativePassphrase();
         }
 
-        $request->validate(['payment_amount' => 'required|numeric', 'payment_units' => 'required|string']);
+        $request->validate(['payment_id' => 'required|string', 'payment_amount' => 'required|numeric', 'payment_units' => 'required|string']);
 
     }
 
