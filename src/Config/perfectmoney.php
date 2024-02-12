@@ -1,4 +1,5 @@
 <?php 
+
 return [
 	'pm_payee_account' => env('PM_PAYEE_ACCOUNT', ''),
 	'pm_success_callback' => '',
@@ -8,5 +9,3 @@ return [
 	'pm_account_id' => env('PM_ACCOUNT_ID', ''),
 	'pm_account_password' => env('PM_ACCOUNT_PASSWORD', ''),
 ];
-
-?>

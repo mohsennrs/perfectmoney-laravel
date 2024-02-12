@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 namespace Package\Perfectmoney;
 
 use Illuminate\Support\ServiceProvider;
@@ -11,22 +12,21 @@ class PerfectmoneyServiceProvider extends ServiceProvider
 {
 	public function boot()
 	{
-		$this->loadMigrationsFrom(__DIR__.'/Database/migrations');
-		$this->loadRoutesFrom(__DIR__.'/Routes/web.php');
+		$this->loadMigrationsFrom(__DIR__ . '/Database/migrations');
+		$this->loadRoutesFrom(__DIR__ . '/Routes/web.php');
 
-		$this->loadViewsFrom(__DIR__.'/Views', 'nishad-prime/perfectmoney-laravel');
+		$this->loadViewsFrom(__DIR__ . '/Views', 'nishad-prime/perfectmoney-laravel');
 		$this->publishes([
-	        __DIR__.'/Config/perfectmoney.php' => config_path('perfectmoney.php'),
-	    ]);
+			__DIR__ . '/Config/perfectmoney.php' => config_path('perfectmoney.php'),
+		]);
 
-	    $this->app->bind('perfectmoney', function ($app) {
-	        return new Perfectmoney();
-	    });
+		$this->app->bind('perfectmoney', function ($app) {
+			return new Perfectmoney();
+		});
 	}
 
 	public function register()
 	{
-		
+
 	}
 }
-?>

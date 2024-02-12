@@ -15,7 +15,7 @@ class CreatePerfectMoneyTransactionsTable extends Migration
     {
         Schema::create('perfect_money_transactions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->enum('status', array('banking','paid','failed','canceled'))->default('banking');
+            $table->enum('status', array('banking', 'paid', 'failed', 'canceled'))->default('banking');
             $table->string('payment_id', 191);
             $table->string('payee_account', 191);
             $table->float('payment_amount');

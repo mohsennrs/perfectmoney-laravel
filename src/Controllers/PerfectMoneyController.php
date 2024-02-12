@@ -1,4 +1,5 @@
-<?php  
+<?php
+
 namespace Package\Perfectmoney\Controllers;
 
 use Illuminate\Routing\Controller;
@@ -8,39 +9,38 @@ use Illuminate\Http\Request;
 
 class PerfectMoneyController extends Controller
 {
-	protected $handler;
+    protected $handler;
 
-	public function __construct() 
-	{
-		$this->handler=new Perfectmoney();
-	}
+    public function __construct()
+    {
+        $this->handler = new Perfectmoney();
+    }
 
-	public function sell(Request $request)
-	{
-		$this->validateInitiationRequest($request);
-		return $this->handler->sell($request);
-	}
+    public function sell(Request $request)
+    {
+        $this->validateInitiationRequest($request);
+        return $this->handler->sell($request);
+    }
 
     public function pmSuccess(Request $request)
     {
-    	return $this->handler->pmSuccess($request);
-        
+        return $this->handler->pmSuccess($request);
+
     }
 
     public function pmFail(Request $request)
     {
-       return $this->handler->pmFail($request);
+        return $this->handler->pmFail($request);
 
     }
 
     public function pmStatus(Request $request)
     {
-   		return $this->handler->pmStatus($request);
+        return $this->handler->pmStatus($request);
     }
 
     public function validateInitiationRequest($request)
     {
-    	$request->validate(['payment_amount' => 'required|numeric', 'payment_units' => 'required']);
+        $request->validate(['payment_amount' => 'required|numeric', 'payment_units' => 'required']);
     }
 }
-?>
